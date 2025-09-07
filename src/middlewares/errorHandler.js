@@ -1,0 +1,1 @@
+// middlewares/errorHandler.js placeholder

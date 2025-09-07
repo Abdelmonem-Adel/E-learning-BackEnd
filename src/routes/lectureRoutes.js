@@ -1,0 +1,1 @@
+// routes/lectureRoutes.js placeholder

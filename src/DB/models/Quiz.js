@@ -1,0 +1,1 @@
+// models/Quiz.js placeholder

@@ -1,0 +1,1 @@
+// controllers/lectureController.js placeholder
