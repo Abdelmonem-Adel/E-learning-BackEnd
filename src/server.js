@@ -1,6 +1,7 @@
 import express from "express";
 import dotenv from "dotenv";
 import connectDB from "./DB/db.connection.js";
+import userRoutes from './routes/User.js'; 
 
 
 
@@ -19,6 +20,7 @@ connectDB();
 app.get("/", (req, res) => {
   res.send("E-Learning Backend is running...");
 });
+app.use("/api/users", userRoutes);
 
 
 
