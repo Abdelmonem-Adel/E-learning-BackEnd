@@ -1,8 +1,8 @@
-# Environment variables
-.env
-
 # Node modules
 node_modules/
+
+# Environment variables
+.env
 
 # Logs
 logs
@@ -25,5 +25,5 @@ build/
 # Uploads 
 uploads/
 
-# Temporary files
+# Temporary files
 tmp/
