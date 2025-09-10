@@ -1,4 +1,6 @@
 // middlewares/authMiddleware.js placeholder
+
+// Authentication
 import jwt from "jsonwebtoken";
 import User from "../DB/models/User.js";
 export const authMiddleware = async (req, res, next) => {
@@ -13,4 +15,18 @@ export const authMiddleware = async (req, res, next) => {
     } catch(err) {
         return res.status(401).json({ message: "Unauthorized" });   
     }
+};
+
+
+
+// Authorization
+
+export const requireRole = (roles) => {
+  return (req, res, next) => {
+    if (!req.user) return res.status(401).json({ message: "Not authenticated" });
+    if (!roles.includes(req.user.role)) {
+      return res.status(403).json({ message: "Forbidden: insufficient role" });
+    }
+    next();
+  };
 };
