@@ -5,29 +5,90 @@ This project provides APIs for managing **Users, Courses, Lectures, Quizzes, and
 
 ---
 
-## 🚀 Features
+🚀 Features
+👤 User Management
 
-- **Authentication & Authorization**
-  - JWT-based login & signup
-  - Role-based access control (Admin / Instructor / Student)
+Register new users (Students / Instructors / Admins)
 
-- **Course Management**
-  - CRUD for courses
-  - Enroll students into courses
+Secure login with JWT
 
-- **Lecture Management**
-  - CRUD for lectures
-  - Attach videos and quizzes
+Profile management
 
-- **Quiz System**
-  - Create quizzes with multiple questions/options
-  - Submit answers and auto-evaluate results
-  - Track attempts and pass/fail status
+Role-based access (Student, Instructor, Admin)
 
-- **Payments**
-  - Integrated with **Paymob** for secure course payments
-  - HMAC validation for callbacks
+🔑 Authentication & Authorization
 
+JWT-based login & signup
+
+Password hashing with bcrypt
+
+Middleware for protected routes
+
+Role-based access control (Admin / Instructor / Student)
+
+📚 Course Management
+
+Create, update, delete, and list courses
+
+Categorize courses by subject and level
+
+Enroll students into courses
+
+Track enrolled students
+
+🎥 Lecture Management
+
+CRUD for lectures
+
+Attach video content (hosted link)
+
+Link lectures to specific courses
+
+Assign quizzes to lectures
+
+📝 Quiz System
+
+Create quizzes for each lecture
+
+Add multiple questions with options
+
+Validate correct answers
+
+Update and delete quizzes
+
+Assign quizzes to specific lectures
+
+📊 Quiz Results
+
+Submit quiz answers and auto-evaluate results
+
+Track score, attempts, and pass/fail status
+
+Store student quiz history
+
+View quiz results per student or per quiz
+
+💳 Payments
+
+Integrated with Paymob for secure payments
+
+Support for multiple payment methods (Cards / Wallets)
+
+Generate payment keys and redirect to Paymob iframe
+
+Webhook handling with HMAC verification
+
+Track order/payment status (pending, paid, failed)
+
+⚙️ System & Dev Tools
+
+Built with Node.js + Express.js
+
+Database: MongoDB with Mongoose
+
+API testing with Postman
+
+Organized project structure (Controllers, Routes, Models, Middleware, Services)
 ---
 
 ## 🛠️ Tech Stack
