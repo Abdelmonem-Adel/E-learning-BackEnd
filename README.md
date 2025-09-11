@@ -5,88 +5,55 @@ This project provides APIs for managing **Users, Courses, Lectures, Quizzes, and
 
 ---
 
-🚀 Features
-👤 User Management
+## 🚀 Features
 
-Register new users (Students / Instructors / Admins)
+### 👤 User Management
+- User registration & secure login with JWT  
+- Profile management  
+- Role-based access (Student, Instructor, Admin)  
 
-Secure login with JWT
+### 🔑 Authentication & Authorization
+- JWT-based authentication  
+- Password encryption with bcrypt  
+- Middleware-protected routes  
+- Role-based permissions  
 
-Profile management
+### 📚 Course Management
+- Full CRUD operations for courses  
+- Categorization by subject and level  
+- Student enrollment system  
+- Track enrolled students  
 
-Role-based access (Student, Instructor, Admin)
+### 🎥 Lecture Management
+- Full CRUD operations for lectures  
+- Video content integration via hosted links  
+- Link lectures to courses  
+- Assign quizzes to lectures  
 
-🔑 Authentication & Authorization
+### 📝 Quiz System
+- Create and manage quizzes per lecture  
+- Support multiple questions and options  
+- Validation of correct answers  
+- Update & delete quizzes  
 
-JWT-based login & signup
+### 📊 Quiz Results
+- Submit answers and auto-evaluate results  
+- Track scores, attempts, and pass/fail status  
+- Store student quiz history  
+- Retrieve results per student or quiz  
 
-Password hashing with bcrypt
+### 💳 Payments
+- Integrated with **Paymob** for secure payments  
+- Multiple payment methods (Cards & Wallets)  
+- Payment key generation & iframe integration  
+- Webhook handling with HMAC verification  
+- Track payment/order status (pending, paid, failed)  
 
-Middleware for protected routes
-
-Role-based access control (Admin / Instructor / Student)
-
-📚 Course Management
-
-Create, update, delete, and list courses
-
-Categorize courses by subject and level
-
-Enroll students into courses
-
-Track enrolled students
-
-🎥 Lecture Management
-
-CRUD for lectures
-
-Attach video content (hosted link)
-
-Link lectures to specific courses
-
-Assign quizzes to lectures
-
-📝 Quiz System
-
-Create quizzes for each lecture
-
-Add multiple questions with options
-
-Validate correct answers
-
-Update and delete quizzes
-
-Assign quizzes to specific lectures
-
-📊 Quiz Results
-
-Submit quiz answers and auto-evaluate results
-
-Track score, attempts, and pass/fail status
-
-Store student quiz history
-
-View quiz results per student or per quiz
-
-💳 Payments
-
-Integrated with Paymob for secure payments
-
-Support for multiple payment methods (Cards / Wallets)
-
-Generate payment keys and redirect to Paymob iframe
-
-Webhook handling with HMAC verification
-
-Track order/payment status (pending, paid, failed)
-
-⚙️ System & Dev Tools
-
-Built with Node.js + Express.js
-
-Database: MongoDB with Mongoose
-
-API testing with Postman
+### ⚙️ System & Tools
+- **Node.js + Express.js** backend  
+- **MongoDB + Mongoose** for database  
+- Tested with **Postman** collection  
+- Clean architecture with Controllers, Routes, Models, Middleware, and Services  
 
 Organized project structure (Controllers, Routes, Models, Middleware, Services)
 ---
