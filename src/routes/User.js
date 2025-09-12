@@ -5,6 +5,8 @@ import { getById } from "../controllers/User.js"; // Example import for another 
 import { updateUser } from "../controllers/User.js";
 import { deleteUser } from "../controllers/User.js";
 import { LoginUser } from "../controllers/User.js";  // 👈 make sure User.js exports properly
+import { ForgotPassword } from "../controllers/User.js"; // ✅ exact spelling
+import { ResetPassword } from "../controllers/User.js"; // ✅ exact spelling
 const router = express.Router();
 
 // Register route
@@ -14,4 +16,7 @@ router.get("/getById/:id", getById); // Example route to get user by ID
 router.put("/updateUser/:id", updateUser); // Example route to update user by ID
 router.delete("/deleteUser/:id", deleteUser); // Example route to delete user by ID
 router.post("/login", LoginUser);
+router.post("/forgot-password", ForgotPassword); // ✅ exact spelling
+router.post("/reset-password", ResetPassword);
+
 export default router;
