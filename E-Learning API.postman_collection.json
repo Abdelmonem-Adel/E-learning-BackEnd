@@ -1,0 +1,537 @@
+{
+	"info": {
+		"_postman_id": "613f052e-2978-445e-a9fa-6afe17008a8b",
+		"name": "E-Learning API",
+		"description": "This collection contains all API endpoints for the E-Learning platform (Courses, Lectures, Quizzes, Quiz Results). Each request includes description and example payloads.",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "40681719",
+		"_collection_link": "https://assignment-3865.postman.co/workspace/Assignment-Workspace~a4ff418a-ffe2-484a-8986-c22a94223df8/collection/40681719-613f052e-2978-445e-a9fa-6afe17008a8b?action=share&source=collection_link&creator=40681719"
+	},
+	"item": [
+		{
+			"name": "Courses",
+			"item": [
+				{
+					"name": "Create Course",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"title\": \"Course 1\", \"description\": \"Intro Course\", \"price\": 100, \"instructorId\": \"{{instructorId}}\"}"
+						},
+						"url": {
+							"raw": "{{basv eUrl}}/courses/create",
+							"host": [
+								"{{basv eUrl}}"
+							],
+							"path": [
+								"courses",
+								"create"
+							]
+						},
+						"description": "Create a new course. Requires title, description, price, and instructorId."
+					},
+					"response": []
+				},
+				{
+					"name": "Get All Courses",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/courses/list",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"courses",
+								"list"
+							]
+						},
+						"description": "Fetch a list of all available courses."
+					},
+					"response": []
+				},
+				{
+					"name": "Get Course By Id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/courses/list-by-id/{{courseId}}",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"courses",
+								"list-by-id",
+								"{{courseId}}"
+							]
+						},
+						"description": "Fetch details of a specific course by its ID."
+					},
+					"response": []
+				},
+				{
+					"name": "Update Course",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"title\": \"Course 5\", \"description\": \"Intro Course\", \"price\": 200}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/courses/update/{{courseId}}",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"courses",
+								"update",
+								"{{courseId}}"
+							]
+						},
+						"description": "Update courses by Id"
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Course",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/courses/delete/{{courseId}}",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"courses",
+								"delete",
+								"{{courseId}}"
+							]
+						},
+						"description": "delete course by Id"
+					},
+					"response": []
+				},
+				{
+					"name": "Enroll Student",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"studentId\": \"64f9c8762b5f11b6a9c12b22\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/courses/enroll-std/{{courseId}}",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"courses",
+								"enroll-std",
+								"{{courseId}}"
+							]
+						},
+						"description": "Enroll Student to course"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Lectures",
+			"item": [
+				{
+					"name": "Create Lecture",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"title\": \"Lecture 4\", \"uploadVideo\": \"http://example.com/video.mp4\", \"courseId\": \"{{courseId}}\"}"
+						},
+						"url": {
+							"raw": "{{baseUrl}}/lectures/create",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"lectures",
+								"create"
+							]
+						},
+						"description": "Create a lecture for a given course. Requires title, video URL, and courseId."
+					},
+					"response": []
+				},
+				{
+					"name": "Get Lectures By Course",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/lectures/list-lecture-by-course/{{courseId}}",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"lectures",
+								"list-lecture-by-course",
+								"{{courseId}}"
+							]
+						},
+						"description": "Fetch all lectures belonging to a specific course."
+					},
+					"response": []
+				},
+				{
+					"name": "List Lectures",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/lectures/list",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"lectures",
+								"list"
+							]
+						},
+						"description": "Get All Lectures"
+					},
+					"response": []
+				},
+				{
+					"name": "Get Lecture By Id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/lectures/get-by-id/{{lectureId}}",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"lectures",
+								"get-by-id",
+								"{{lectureId}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Lecture",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"title\": \"Lecture 4\", \"uploadVideo\": \"http://test.com/video.mp4\"}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/lectures/update/{{lectureId}}",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"lectures",
+								"update",
+								"{{lectureId}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete lecture",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/lectures/delete/{{lectureId}}",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"lectures",
+								"delete",
+								"{{lectureId}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Upload Video",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/lectures/upload-video/{{lectureId}}",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"lectures",
+								"upload-video",
+								"{{lectureId}}"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Quizzes",
+			"item": [
+				{
+					"name": "Create Quiz",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"lectureId\": \"{{lectureId}}\", \"questions\": [{\"questionText\": \"2+2=?\", \"options\": [\"3\", \"4\"], \"correctAnswer\": \"4\"}]}"
+						},
+						"url": {
+							"raw": "{{baseUrl}}/quizzes/create",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"quizzes",
+								"create"
+							]
+						},
+						"description": "Create a quiz linked to a lecture. Provide lectureId and an array of questions with options and correct answers."
+					},
+					"response": []
+				},
+				{
+					"name": "Get Quiz By Id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/quizzes/get-by-id/{{quizId}}",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"quizzes",
+								"get-by-id",
+								"{{quizId}}"
+							]
+						},
+						"description": "Fetch details of a quiz by its ID, including questions."
+					},
+					"response": []
+				},
+				{
+					"name": "Get Quizzes",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/quizzes/get-quizzes",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"quizzes",
+								"get-quizzes"
+							]
+						},
+						"description": "List All Quizzes"
+					},
+					"response": []
+				},
+				{
+					"name": "Update Quiz",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{ \"questions\": [{\"questionText\": \"2+2=?\", \"options\": [\"3\", \"4\"], \"correctAnswer\": \"4\"}]}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/quizzes/update/{{quizId}}",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"quizzes",
+								"update",
+								"{{quizId}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Quiz",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/quizzes/delete/{{quizId}}",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"quizzes",
+								"delete",
+								"{{quizId}}"
+							]
+						},
+						"description": "Delet One Quize by id"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Quiz Results",
+			"item": [
+				{
+					"name": "Submit Quiz",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"studentId\": \"{{studentId}}\", \"quizId\": \"{{quizId}}\", \"answers\": [\"4\"]}"
+						},
+						"url": {
+							"raw": "{{baseUrl}}/quiz-results/submit",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"quiz-results",
+								"submit"
+							]
+						},
+						"description": "Submit answers for a quiz. System will auto-calculate score and pass/fail."
+					},
+					"response": []
+				},
+				{
+					"name": "Get Student Results",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/quiz-results/student/{{studentId}}",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"quiz-results",
+								"student",
+								"{{studentId}}"
+							]
+						},
+						"description": "Fetch all quiz results for a specific student by studentId."
+					},
+					"response": []
+				},
+				{
+					"name": "List All Result",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/quiz-results/all-result",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"quiz-results",
+								"all-result"
+							]
+						},
+						"description": "List All Quizzes Result"
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"variable": [
+		{
+			"key": "baseUrl",
+			"value": "http://localhost:5000/api"
+		},
+		{
+			"key": "instructorId",
+			"value": ""
+		},
+		{
+			"key": "courseId",
+			"value": ""
+		},
+		{
+			"key": "lectureId",
+			"value": ""
+		},
+		{
+			"key": "quizId",
+			"value": ""
+		},
+		{
+			"key": "studentId",
+			"value": ""
+		}
+	]
+}

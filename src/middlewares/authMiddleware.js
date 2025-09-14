@@ -27,6 +27,7 @@ export const requireRole = (roles) => {
     if (!roles.includes(req.user.role)) {
       return res.status(403).json({ message: "Forbidden: insufficient role" });
     }
+    if (roles !== "instructor") res.status(401).json({ message: "Should be An a instructor" });
     next();
   };
 };
