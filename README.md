@@ -72,9 +72,10 @@ This project provides APIs for managing **Users, Courses, Lectures, Quizzes, and
 ## ⚙️ Installation
 
 ### 1️⃣ Clone the repo:
-```bash
+  ```bash
 git clone https://github.com/your-username/E-learning-Backend.git
 cd E-learning-Backend
+
 
 
 Install dependencies: 
