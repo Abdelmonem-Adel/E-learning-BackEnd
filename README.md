@@ -1,6 +1,6 @@
 # 🎓 E-Learning Platform Backend
 
-Backend for an E-Learning platform built with **Node.js**, **Express**, and **MongoDB**.  
+Backend for an **E-Learning platform** built with **Node.js, Express, and MongoDB**.  
 This project provides APIs for managing **Users, Courses, Lectures, Quizzes, and Quiz Results**, along with **Authentication, Authorization, and Payment Integration (Paymob)**.
 
 ---
@@ -10,7 +10,7 @@ This project provides APIs for managing **Users, Courses, Lectures, Quizzes, and
 ### 👤 User Management
 - User registration & secure login with JWT  
 - Profile management  
-- Role-based access (Student, Instructor, Admin)  
+- Role-based access (Student, Instructor, Admin)
 
 ### 🔑 Authentication & Authorization
 - JWT-based authentication  
@@ -33,7 +33,7 @@ This project provides APIs for managing **Users, Courses, Lectures, Quizzes, and
 ### 📝 Quiz System
 - Create and manage quizzes per lecture  
 - Support multiple questions and options  
-- Validation of correct answers  
+- Validate correct answers  
 - Update & delete quizzes  
 
 ### 📊 Quiz Results
@@ -44,36 +44,37 @@ This project provides APIs for managing **Users, Courses, Lectures, Quizzes, and
 
 ### 💳 Payments
 - Integrated with **Paymob** for secure payments  
-- Multiple payment methods (Cards & Wallets)  
+- Supports multiple payment methods (Cards & Wallets)  
 - Payment key generation & iframe integration  
-- Webhook handling with HMAC verification  
+- Webhook handling with **HMAC verification**  
 - Track payment/order status (pending, paid, failed)  
 
 ### ⚙️ System & Tools
-- **Node.js + Express.js** backend  
-- **MongoDB + Mongoose** for database  
-- Tested with **Postman** collection  
+- Node.js + Express.js backend  
+- MongoDB + Mongoose for database  
+- Tested with Postman collection  
 - Clean architecture with Controllers, Routes, Models, Middleware, and Services  
 
-Organized project structure (Controllers, Routes, Models, Middleware, Services)
 ---
 
 ## 🛠️ Tech Stack
 
-- **Backend:** Node.js, Express.js  
-- **Database:** MongoDB (Mongoose)  
-- **Auth:** JWT, bcrypt  
-- **Payment:** Paymob  
-- **Testing:** Postman  
+| Category | Technology |
+|-----------|-------------|
+| **Backend** | Node.js, Express.js |
+| **Database** | MongoDB (Mongoose) |
+| **Auth** | JWT, bcrypt |
+| **Payment** | Paymob |
+| **Testing** | Postman |
 
 ---
 
 ## ⚙️ Installation
 
-1. Clone the repo:
-   ```bash
-   git clone https://github.com/your-username/E-learning-Backend.git
-   cd E-learning-Backend
+### 1️⃣ Clone the repo:
+```bash
+git clone https://github.com/your-username/E-learning-Backend.git
+cd E-learning-Backend
 
 
 Install dependencies: 
