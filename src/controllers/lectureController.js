@@ -9,7 +9,6 @@ export const createLecture = async (req, res) => {
     const lecture = new Lecture(req.body);
     await lecture.save();
 
-    // اربط المحاضرة بالكورس
     await Course.findByIdAndUpdate(lecture.courseId, {
       $push: { lectures: lecture._id }
     });
